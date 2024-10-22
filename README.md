@@ -32,9 +32,9 @@ Projeto desenvolvido utilizando as seguintes tecnologias
 
 ## Como baixar projeto
 
-    $ git clone link-git-hub
+    $ git clone https://github.com/samuelpd22/bilheteriatoDo-front-Angular
     
-    $ cd nome-pasta
+    $ cd bilheteriatoDo-front-Angular
 
     $ npm i
 
