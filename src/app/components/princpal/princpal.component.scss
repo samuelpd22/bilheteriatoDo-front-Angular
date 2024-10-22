@@ -1,0 +1,89 @@
+span {
+    color: black;
+    font-size: 14px;
+    text-align: inherit;
+}
+
+.custom-card {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fixed-img {
+    width: 100%; /* Largura da imagem ocupa 100% do card */
+    height: 150px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Corta a imagem para caber no espaço definido */
+}
+
+.card-dataEhora {
+    color: rgb(88, 134, 235);
+}
+
+.card-local {
+    color: rgba(15, 15, 15, 0.596);
+    font-weight: 800;
+}
+
+.col-cidade {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajuste os valores conforme necessário */
+    max-width: 146px;
+    max-height: 390px;
+    min-height: 390px;
+}
+
+.form-check,
+h5 {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.card-produtos {
+    min-height: 800px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Muda a direção das colunas para vertical */
+    }
+
+    .col-cidade {
+        max-width: 100%; /* Largura total em telas pequenas */
+        margin-bottom: 20px; /* Espaço entre os cards */
+        min-height: 190px; /* Ajuste a altura mínima do card */
+    }
+
+    .form-check {
+        display: inline-block; /* Alinha os nomes lado a lado */
+        margin-right: 10px; /* Espaço entre os botões de rádio */
+    }
+
+    .card-produtos {
+        min-height: auto; /* Ajusta a altura mínima em telas menores */
+    }
+}
+
+
+.carousel-container {
+    max-width: 800px; /* Ajuste o valor conforme necessário */
+    margin: 0 auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde partes das imagens que excedem o contêiner */
+}
+
+.carousel-item img {
+    width: 100%; /* Garante que a imagem preencha 100% do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Define uma altura máxima para as imagens */
+    object-fit: cover; /* Corta a imagem para caber no espaço definido */
+}
+mdb-form-control{
+    margin-bottom: 10px;
+    max-height: 40px;
+}

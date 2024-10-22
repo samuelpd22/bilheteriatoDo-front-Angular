@@ -1,0 +1,170 @@
+<div class="container">
+    <div class="row">
+        <!-- Coluna para os botões de rádio -->
+        <div class="col-md-3 col-cidade">
+<br>
+<mdb-form-control>
+    <input
+      mdbInput
+      type="text"
+      id="form1"
+      class="form-control"
+      [(ngModel)]="nome"
+      (keyup.enter)="buscarPorNome()" 
+    />
+    <label mdbLabel class="form-label" for="form1">Pesquisar</label>
+  </mdb-form-control>
+
+            <h5><strong class="card-dataEhora">Selecione uma cidade:</strong></h5>
+            
+            <div class="form-check">
+                <input
+                    mdbRadio
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                    (change)="listAll()"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">Todos</label>
+            </div>
+
+            <!-- Botão de rádio para Ipatinga -->
+            <div class="form-check">
+                <input
+                    mdbRadio
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    (change)="listCidade('IPATINGA')"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">Ipatinga</label>
+            </div>
+
+            <!-- Botão de rádio para Timóteo -->
+            <div class="form-check">
+                <input
+                    mdbRadio
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault3"
+                    [checked]="true"
+                    (change)="listCidade('TIMOTEO')"
+                />
+                <label class="form-check-label" for="flexRadioDefault3">Timóteo</label>
+            </div>
+
+            <!-- Botão de rádio para Juiz de Fora -->
+            <div class="form-check">
+                <input
+                    mdbRadio
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault4"
+                    (change)="listCidade('JUIZ_DE_FORA')"
+                />
+                <label class="form-check-label" for="flexRadioDefault4">Juiz de Fora</label>
+            </div>
+
+            <!-- Botão de rádio para Belo Horizonte -->
+            <div class="form-check">
+                <input
+                    mdbRadio
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault5"
+                    (change)="listCidade('BELO_HORIZONTE')"
+                />
+                <label class="form-check-label" for="flexRadioDefault5">Belo Horizonte</label>
+            </div>
+        </div>
+
+        <!-- Coluna para mostrar os objetos toDo -->
+        <div class="col-md-9">
+            <div class="card card-produtos">
+                <div class="card-body">
+                    <div class="row">
+
+                          
+                        <div *ngFor="let toDo of toDolist" class="col-md-4 col-lg-3 mb-3">
+                            <div class="card" style="width: 100%;">
+                                <img src="{{toDo.image}}" class="card-img-top fixed-img" alt="" />
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>{{toDo.nome}}</strong></h5>
+                                    <p class="card-text card-dataEhora"><strong>{{toDo.dataEhora}}</strong></p>
+                                </div>
+                                <ul class="list-group list-group-light list-group-small">
+                                    <li class="list-group-item px-4">
+                                        <span [ngClass]="toDo.realizado ? 'text-danger' : 'text-dark'">
+                                            {{ toDo.realizado ? 'Realizado' : 'Pendente' }}
+                                        </span>
+                                        <br />
+                                        <span class="card-local">{{toDo.local}}</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="#" class="card-link text-primary">Ingressos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+
+            <!--  <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+                <mdb-carousel-item>
+                <img
+                    src="https://cdn.pixabay.com/photo/2016/11/22/19/15/audience-1850119_1280.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Avengend Sevenfold</h5>
+                    <p>Simplismente uma energia inexplicavel!</p>
+                </div>
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                <img
+                    src="https://somosmusica.cdbaby.com/wp-content/uploads/2016/12/ncdg9mk3pby-nainoa-shizuru.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Travis Scott</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                </mdb-carousel-item>
+                <mdb-carousel-item>
+                <img
+                    src="https://img.freepik.com/fotos-premium/palco-de-concerto-publico-luzes-desempenho-musicos-holofotes-atmosfera-musica-ao-vivo_33839-16288.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slipknot</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+                </mdb-carousel-item>
+            </mdb-carousel>
+
+ -->
+           
+
+        </div>
+
+        
+    </div>
+
+    <br>
+    
+</div>
+
+
+
+
